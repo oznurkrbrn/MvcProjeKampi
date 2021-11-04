@@ -18,7 +18,7 @@ namespace MvcProjeKampi.Controllers
         WriterManager wr = new WriterManager(new EFWriterDal());
 
 
-        Context context = new Context();
+
         // GET: İstatistik
         public ActionResult Index()
         {
