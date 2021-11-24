@@ -14,6 +14,7 @@ namespace MvcProjeKampi.Controllers
         // GET: Heading
         HeadingManager hm = new HeadingManager(new EFHeadingDal());
         CategoryManager cm = new CategoryManager(new EFCategoryDal());
+        WriterManager wm = new WriterManager(new EFWriterDal());
         public ActionResult Index()
         {
             var headingvalues = hm.GetList();
@@ -30,15 +31,28 @@ namespace MvcProjeKampi.Controllers
                                                       Value = x.CategoryID.ToString()
 
                                                   }).ToList();
+            List<SelectListItem> valuewriter = (from x in wm.GetList()
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.WriterName+" "+x.WriterSurname,
+                                                    Value = x.WriterId.ToString()
+
+                                                }).ToList();
             ViewBag.vlc = valuecategory;
+            ViewBag.vlw = valuewriter;
             return View();
         }
         [HttpPost]
         public ActionResult AddHeading(Heading p)
         {
-            p.HeadingDate=DateTime.Parse(DateTime.Now.ToShortDateString());
+            p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult ContentByHeading()
+        {
+            return View();
         }
     }
 }

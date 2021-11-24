@@ -44,5 +44,6 @@ namespace BusinessLayer.Concrete
         {
             _categoryDal.Update(category);
         }
+       
     }
 }
