@@ -23,6 +23,8 @@ namespace EntityLayer.Concrete
         public int WriterID { get; set; }
         public virtual Writer Wrier { get; set; }
 
+        public bool HeadingStatus { get; set; }
+
 
     }
 }

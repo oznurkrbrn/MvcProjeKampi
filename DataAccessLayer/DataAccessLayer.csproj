@@ -79,6 +79,14 @@
     <Compile Include="Migrations\202111191007125_mig_writer_addstatus.designer.cs">
       <DependentUpon>202111191007125_mig_writer_addstatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111260641346_mig_contentstatusadd.cs" />
+    <Compile Include="Migrations\202111260641346_mig_contentstatusadd.designer.cs">
+      <DependentUpon>202111260641346_mig_contentstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111260646420_mig_headinfstatusadd.cs" />
+    <Compile Include="Migrations\202111260646420_mig_headinfstatusadd.designer.cs">
+      <DependentUpon>202111260646420_mig_headinfstatusadd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -101,6 +109,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111191007125_mig_writer_addstatus.resx">
       <DependentUpon>202111191007125_mig_writer_addstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111260641346_mig_contentstatusadd.resx">
+      <DependentUpon>202111260641346_mig_contentstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111260646420_mig_headinfstatusadd.resx">
+      <DependentUpon>202111260646420_mig_headinfstatusadd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
